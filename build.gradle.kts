@@ -22,9 +22,9 @@ dependencies {
         exclude(group = "org.jetbrains.compose.material", module = "material-desktop")
         exclude(group = "org.jetbrains.compose.material", module = "material-ripple")
     }
-    implementation(compose.components.resources)
-    implementation(compose.material3)
-    implementation(compose.materialIconsExtended)
+    implementation(libs.compose.resources)
+    implementation(libs.material)
+    implementation(libs.material.iconsExtended)
     // System theme detection
     implementation(libs.theme.detector) {
         exclude(group = "net.java.dev.jna", module = "jna")
