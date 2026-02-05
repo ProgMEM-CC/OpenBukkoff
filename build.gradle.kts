@@ -26,10 +26,14 @@ dependencies {
     implementation(libs.material)
     implementation(libs.material.iconsExtended)
     // System theme detection
-    implementation(libs.theme.detector) {
+    // TODO: when we detect dark theme,
+    //  on Windows (because they're black) we should to call DwmSetWindowAttribute with `DWMWA_USE_IMMERSIVE_DARK_MODE`
+    //  to make the title bar dark.
+    // see: https://github.com/SpoilerRules/server-list-explorer/blob/main/ui/src/main/kotlin/com/spoiligaming/explorer/ui/window/dwm/DwmWindowManager.kt
+    implementation(libs.theme.detector)/* {
         exclude(group = "net.java.dev.jna", module = "jna")
         exclude(group = "net.java.dev.jna", module = "jna-platform")
-    }
+    }*/
     implementation(libs.catppuccin)
 }
 
