@@ -1,0 +1,16 @@
+[versions]
+kotlin = "2.3.10"
+compose = "1.11.0-alpha02"
+themeDetector = "3.9.1"
+
+[libraries]
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+theme-detector = { module = "com.github.Dansoftowner:jSystemThemeDetector", version.ref = "themeDetector" }
+catppuccin = { module = "com.catppuccin:catppuccin-palette", version = "2.0.3" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
