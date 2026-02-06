@@ -1,9 +1,9 @@
-package cc.progmem.payloadBukkit;
+package org.bukkit.core;
 
 import org.bukkit.event.Listener;
 
-public final class PayloadBukkit implements Listener {
-    public PayloadBukkit() {
+public final class CoreListener implements Listener {
+    public CoreListener() {
 
     }
     public void stuff() {
